@@ -1,0 +1,19 @@
+{
+  "templates": {
+    "programming_language": {
+      "flashcards_count": 10,
+      "practice_prompt": "Write a small program using {skill} that solves a real problem from your target role.",
+      "self_check": "Can you explain {skill} to a junior developer without notes?"
+    },
+    "framework": {
+      "flashcards_count": 8,
+      "practice_prompt": "Build a minimal working example using {skill} that demonstrates its core feature.",
+      "self_check": "Can you list the top 5 reasons to use {skill} over its alternatives?"
+    },
+    "soft_skill": {
+      "flashcards_count": 5,
+      "practice_prompt": "Write a short story from your past experience demonstrating {skill}. Use STAR format.",
+      "self_check": "Can you give a concrete example of {skill} you demonstrated in the past month?"
+    }
+  }
+}

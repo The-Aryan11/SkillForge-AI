@@ -1,0 +1,32 @@
+{
+  "Technology": {
+    "core_skills": ["Python", "JavaScript", "Git", "Linux", "SQL"],
+    "onet_codes": ["15-1252.00", "15-1253.00", "15-1244.00"],
+    "sub_domains": ["Frontend", "Backend", "DevOps", "Data Engineering", "ML Engineering"]
+  },
+  "Data": {
+    "core_skills": ["SQL", "Python", "Excel", "Statistics", "Data Visualization"],
+    "onet_codes": ["15-2051.00", "15-2031.00"],
+    "sub_domains": ["Business Intelligence", "Data Science", "Data Engineering"]
+  },
+  "Business": {
+    "core_skills": ["Communication", "Project Management", "Excel", "CRM", "Analytics"],
+    "onet_codes": ["11-2021.00", "13-1111.00", "11-2031.00"],
+    "sub_domains": ["Marketing", "Sales", "Operations", "Strategy"]
+  },
+  "Operations": {
+    "core_skills": ["Inventory Management", "Safety Compliance", "Logistics", "Team Leadership"],
+    "onet_codes": ["53-1042.00", "11-3071.00"],
+    "sub_domains": ["Warehouse", "Supply Chain", "Manufacturing"]
+  },
+  "Healthcare": {
+    "core_skills": ["Patient Care", "EHR Systems", "HIPAA", "Clinical Documentation", "Medication Administration"],
+    "onet_codes": ["29-1141.00", "29-2061.00"],
+    "sub_domains": ["Nursing", "Medical Technology", "Administration"]
+  },
+  "Finance": {
+    "core_skills": ["Financial Modeling", "Excel", "SQL", "Accounting", "Risk Analysis"],
+    "onet_codes": ["13-2051.00", "13-2011.00"],
+    "sub_domains": ["Investment Banking", "Corporate Finance", "Accounting", "Risk"]
+  }
+}

@@ -1,0 +1,2047 @@
+{
+  "courses": [
+    {
+      "id": "PY-001",
+      "title": "Python for Everybody",
+      "provider": "Coursera / U of Michigan",
+      "url": "https://www.coursera.org/specializations/python",
+      "duration_hours": 20,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Python"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Python with this free resource from Coursera / U of Michigan."
+    },
+    {
+      "id": "PY-002",
+      "title": "Python Full Course for Beginners",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "duration_hours": 4.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Python"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Python with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "PY-003",
+      "title": "Python OOP Tutorial",
+      "provider": "Corey Schafer (YouTube)",
+      "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM",
+      "duration_hours": 2,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Python",
+        "OOP"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Python"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Python with this free resource from Corey Schafer (YouTube)."
+    },
+    {
+      "id": "PY-004",
+      "title": "Automate the Boring Stuff with Python",
+      "provider": "Al Sweigart (Free Book)",
+      "url": "https://automatetheboringstuff.com",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "article",
+      "skills_covered": [
+        "Python",
+        "Automation"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Python"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Python with this free resource from Al Sweigart (Free Book)."
+    },
+    {
+      "id": "PY-005",
+      "title": "Python Data Structures & Algorithms",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=pkYVOmU3MgA",
+      "duration_hours": 5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Python",
+        "Algorithms",
+        "Data Structures"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Python"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Python with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "JS-001",
+      "title": "JavaScript Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "duration_hours": 3.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "JavaScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in JavaScript"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn JavaScript with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "JS-002",
+      "title": "JavaScript Algorithms & DS",
+      "provider": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+      "duration_hours": 300,
+      "difficulty": "intermediate",
+      "format": "interactive",
+      "skills_covered": [
+        "JavaScript",
+        "Algorithms"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in JavaScript"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn JavaScript with this free resource from freeCodeCamp."
+    },
+    {
+      "id": "TS-001",
+      "title": "TypeScript Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=30LWjhZzg50",
+      "duration_hours": 2,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "TypeScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in TypeScript"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn TypeScript with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "GO-001",
+      "title": "Go Programming Language Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=YS4e4q9oBaU",
+      "duration_hours": 7,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Go"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Go"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Go with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "RS-001",
+      "title": "Rust Programming Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=MsocPEZBd-M",
+      "duration_hours": 14,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Rust"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Rust"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Rust with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "JV-001",
+      "title": "Java Tutorial for Beginners",
+      "provider": "Mosh (YouTube)",
+      "url": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+      "duration_hours": 2.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Java"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Java"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Java with this free resource from Mosh (YouTube)."
+    },
+    {
+      "id": "CS-001",
+      "title": "C# Tutorial for Beginners",
+      "provider": "Mosh (YouTube)",
+      "url": "https://www.youtube.com/watch?v=gfkTfcpWqAY",
+      "duration_hours": 1,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "C#"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in C#"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn C# with this free resource from Mosh (YouTube)."
+    },
+    {
+      "id": "RE-001",
+      "title": "React Tutorial for Beginners",
+      "provider": "Traversy Media (YouTube)",
+      "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
+      "duration_hours": 1.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "React",
+        "JavaScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in React"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn React with this free resource from Traversy Media (YouTube)."
+    },
+    {
+      "id": "RE-002",
+      "title": "React Full Course 2024",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=x4rFhThSX04",
+      "duration_hours": 10,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "React",
+        "JavaScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in React"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn React with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "RE-003",
+      "title": "React Hooks Deep Dive",
+      "provider": "Jack Herrington (YouTube)",
+      "url": "https://www.youtube.com/watch?v=dpw9EHDh2bM",
+      "duration_hours": 2,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "React"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in React"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn React with this free resource from Jack Herrington (YouTube)."
+    },
+    {
+      "id": "NX-001",
+      "title": "Next.js 14 Full Course",
+      "provider": "JavaScript Mastery (YouTube)",
+      "url": "https://www.youtube.com/watch?v=wm5gMKuwSYk",
+      "duration_hours": 5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Next.js",
+        "React"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Next.js"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Next.js with this free resource from JavaScript Mastery (YouTube)."
+    },
+    {
+      "id": "VU-001",
+      "title": "Vue.js Crash Course",
+      "provider": "Traversy Media (YouTube)",
+      "url": "https://www.youtube.com/watch?v=qZXt1Aom3Cs",
+      "duration_hours": 1.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Vue.js",
+        "JavaScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Vue.js"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Vue.js with this free resource from Traversy Media (YouTube)."
+    },
+    {
+      "id": "AN-001",
+      "title": "Angular Tutorial",
+      "provider": "Mosh (YouTube)",
+      "url": "https://www.youtube.com/watch?v=k5E2AVpwsko",
+      "duration_hours": 7,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Angular",
+        "TypeScript"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Angular"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Angular with this free resource from Mosh (YouTube)."
+    },
+    {
+      "id": "GI-001",
+      "title": "Git & GitHub Crash Course",
+      "provider": "Traversy Media (YouTube)",
+      "url": "https://www.youtube.com/watch?v=SWYqp7iY_Tc",
+      "duration_hours": 1,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Git",
+        "Version Control"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Git"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Git with this free resource from Traversy Media (YouTube)."
+    },
+    {
+      "id": "GI-002",
+      "title": "Advanced Git Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=Uszj_k0DGsg",
+      "duration_hours": 4,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "Git"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Git"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Git with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "LX-001",
+      "title": "Linux Command Line Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=iwolPf6kN-k",
+      "duration_hours": 5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Linux",
+        "Command Line"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Linux"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Linux with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "LX-002",
+      "title": "Linux Shell Scripting",
+      "provider": "Ryan Chadwick (Online)",
+      "url": "https://ryanstutorials.net/bash-scripting-tutorial/",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "article",
+      "skills_covered": [
+        "Linux",
+        "Bash"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Linux"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Linux with this free resource from Ryan Chadwick (Online)."
+    },
+    {
+      "id": "NT-001",
+      "title": "Computer Networking Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=qiQR5rTSshw",
+      "duration_hours": 9,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Networking",
+        "TCP/IP"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Networking"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Networking with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "DS-001",
+      "title": "Data Structures & Algorithms",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+      "duration_hours": 40,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "Algorithms",
+        "Data Structures"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Algorithms"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Algorithms with this free resource from MIT OpenCourseWare."
+    },
+    {
+      "id": "SD-001",
+      "title": "System Design Interview",
+      "provider": "Gaurav Sen (YouTube)",
+      "url": "https://www.youtube.com/watch?v=xpDnVSmNFX0",
+      "duration_hours": 3,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "System Design"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in System Design"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn System Design with this free resource from Gaurav Sen (YouTube)."
+    },
+    {
+      "id": "SD-002",
+      "title": "Grokking System Design",
+      "provider": "freeCodeCamp Blog",
+      "url": "https://www.freecodecamp.org/news/systems-design-for-interviews/",
+      "duration_hours": 5,
+      "difficulty": "advanced",
+      "format": "article",
+      "skills_covered": [
+        "System Design"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in System Design"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn System Design with this free resource from freeCodeCamp Blog."
+    },
+    {
+      "id": "SQ-001",
+      "title": "SQL Tutorial for Beginners",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+      "duration_hours": 4.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "SQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in SQL"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn SQL with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "SQ-002",
+      "title": "Advanced SQL Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=M-55BmjOuXY",
+      "duration_hours": 3,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "SQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in SQL"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn SQL with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "SQ-003",
+      "title": "PostgreSQL Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "PostgreSQL",
+        "SQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in PostgreSQL"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn PostgreSQL with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "SQ-004",
+      "title": "MySQL Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=ER8oKX5myE0",
+      "duration_hours": 3,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "MySQL",
+        "SQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in MySQL"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn MySQL with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "MG-001",
+      "title": "MongoDB Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=-56x56UppqQ",
+      "duration_hours": 1.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "MongoDB",
+        "NoSQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in MongoDB"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn MongoDB with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "RD-001",
+      "title": "Redis Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=jgpVdJB2sKQ",
+      "duration_hours": 1.5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Redis"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Redis"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Redis with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "DG-001",
+      "title": "Database Design Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=ztHopE5Wnpc",
+      "duration_hours": 8,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Database Design",
+        "SQL"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Database Design"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Database Design with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "AW-001",
+      "title": "AWS Cloud Practitioner Essentials",
+      "provider": "AWS Training (Free)",
+      "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "AWS",
+        "Cloud Computing"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in AWS"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn AWS with this free resource from AWS Training (Free)."
+    },
+    {
+      "id": "AW-002",
+      "title": "AWS Solutions Architect",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=Ia-UEYYR44s",
+      "duration_hours": 10,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "AWS",
+        "Cloud Architecture"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in AWS"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn AWS with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "GC-001",
+      "title": "Google Cloud Fundamentals",
+      "provider": "Google Cloud (Free)",
+      "url": "https://cloudskillsboost.google/paths/9",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Google Cloud",
+        "Cloud Computing"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Google Cloud"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Google Cloud with this free resource from Google Cloud (Free)."
+    },
+    {
+      "id": "AZ-001",
+      "title": "Azure Fundamentals (AZ-900)",
+      "provider": "Microsoft Learn (Free)",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Azure",
+        "Cloud Computing"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Azure"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Azure with this free resource from Microsoft Learn (Free)."
+    },
+    {
+      "id": "DK-001",
+      "title": "Docker Tutorial for Beginners",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo",
+      "duration_hours": 2,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Docker",
+        "Containers"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Docker"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Docker with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "DK-002",
+      "title": "Docker Full Course",
+      "provider": "TechWorld with Nana (YouTube)",
+      "url": "https://www.youtube.com/watch?v=3c-iBn73dDE",
+      "duration_hours": 5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Docker"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Docker"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Docker with this free resource from TechWorld with Nana (YouTube)."
+    },
+    {
+      "id": "K8-001",
+      "title": "Kubernetes Tutorial for Beginners",
+      "provider": "TechWorld with Nana (YouTube)",
+      "url": "https://www.youtube.com/watch?v=X48VuDVv0do",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Kubernetes",
+        "Docker"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Kubernetes"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Kubernetes with this free resource from TechWorld with Nana (YouTube)."
+    },
+    {
+      "id": "K8-002",
+      "title": "Kubernetes Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=d6WC5n9G_sM",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Kubernetes"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Kubernetes"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Kubernetes with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "TF-001",
+      "title": "Terraform Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=SLB_c_ayRMo",
+      "duration_hours": 2.5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Terraform",
+        "Infrastructure as Code"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Terraform"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Terraform with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "CI-001",
+      "title": "GitHub Actions Full Course",
+      "provider": "TechWorld with Nana (YouTube)",
+      "url": "https://www.youtube.com/watch?v=R8_veQiYBjI",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "GitHub Actions",
+        "CI/CD"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in GitHub Actions"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn GitHub Actions with this free resource from TechWorld with Nana (YouTube)."
+    },
+    {
+      "id": "CI-002",
+      "title": "Jenkins Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=6YZvp2GwT0A",
+      "duration_hours": 5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Jenkins",
+        "CI/CD"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Jenkins"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Jenkins with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "PM-001",
+      "title": "Prometheus & Grafana Tutorial",
+      "provider": "TechWorld with Nana (YouTube)",
+      "url": "https://www.youtube.com/watch?v=h4Sl21AKiDg",
+      "duration_hours": 3,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Prometheus",
+        "Grafana",
+        "Monitoring"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Prometheus"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Prometheus with this free resource from TechWorld with Nana (YouTube)."
+    },
+    {
+      "id": "PD-001",
+      "title": "Pandas Tutorial",
+      "provider": "Corey Schafer (YouTube)",
+      "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+      "duration_hours": 1,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Pandas",
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Pandas"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Pandas with this free resource from Corey Schafer (YouTube)."
+    },
+    {
+      "id": "PD-002",
+      "title": "Pandas Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=gtjxAH8uaP0",
+      "duration_hours": 4,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Pandas",
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Pandas"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Pandas with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "NP-001",
+      "title": "NumPy Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+      "duration_hours": 1,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "NumPy",
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in NumPy"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn NumPy with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "ST-001",
+      "title": "Statistics for Data Science",
+      "provider": "Khan Academy (Free)",
+      "url": "https://www.khanacademy.org/math/statistics-probability",
+      "duration_hours": 20,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Statistics",
+        "Probability"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Statistics"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Statistics with this free resource from Khan Academy (Free)."
+    },
+    {
+      "id": "ML-001",
+      "title": "Machine Learning Crash Course",
+      "provider": "Google (Free)",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "duration_hours": 15,
+      "difficulty": "intermediate",
+      "format": "interactive",
+      "skills_covered": [
+        "Machine Learning",
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Machine Learning"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Machine Learning with this free resource from Google (Free)."
+    },
+    {
+      "id": "ML-002",
+      "title": "Machine Learning Full Course",
+      "provider": "Kaggle (Free)",
+      "url": "https://www.kaggle.com/learn/machine-learning",
+      "duration_hours": 5,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Machine Learning",
+        "scikit-learn"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Machine Learning"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Machine Learning with this free resource from Kaggle (Free)."
+    },
+    {
+      "id": "ML-003",
+      "title": "ML for Beginners (Microsoft)",
+      "provider": "Microsoft GitHub",
+      "url": "https://github.com/microsoft/ML-For-Beginners",
+      "duration_hours": 40,
+      "difficulty": "beginner",
+      "format": "article",
+      "skills_covered": [
+        "Machine Learning"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Machine Learning"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Machine Learning with this free resource from Microsoft GitHub."
+    },
+    {
+      "id": "DL-001",
+      "title": "Deep Learning with Python",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-s191-introduction-to-deep-learning-january-iap-2023/",
+      "duration_hours": 15,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Deep Learning"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Deep Learning with this free resource from MIT OpenCourseWare."
+    },
+    {
+      "id": "DL-002",
+      "title": "PyTorch Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=V_xro1bcAuA",
+      "duration_hours": 10,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "PyTorch",
+        "Deep Learning"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in PyTorch"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn PyTorch with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "TF-DL",
+      "title": "TensorFlow 2 Full Course",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      "duration_hours": 7,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "TensorFlow",
+        "Deep Learning"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in TensorFlow"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn TensorFlow with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "NLP-001",
+      "title": "NLP with Python",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=X2vAabgKiuM",
+      "duration_hours": 7,
+      "difficulty": "advanced",
+      "format": "video",
+      "skills_covered": [
+        "NLP",
+        "Python",
+        "Machine Learning"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in NLP"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn NLP with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "VIS-001",
+      "title": "Matplotlib Tutorial",
+      "provider": "Corey Schafer (YouTube)",
+      "url": "https://www.youtube.com/watch?v=UO98lJQ3QGI",
+      "duration_hours": 2.5,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Matplotlib",
+        "Python",
+        "Data Visualization"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Matplotlib"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Matplotlib with this free resource from Corey Schafer (YouTube)."
+    },
+    {
+      "id": "SP-001",
+      "title": "Apache Spark Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=_C8kWso4ne4",
+      "duration_hours": 5,
+      "difficulty": "intermediate",
+      "format": "video",
+      "skills_covered": [
+        "Apache Spark",
+        "Python"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Apache Spark"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Apache Spark with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "KG-001",
+      "title": "Kaggle Machine Learning",
+      "provider": "Kaggle (Free)",
+      "url": "https://www.kaggle.com/learn",
+      "duration_hours": 30,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Machine Learning",
+        "Python",
+        "pandas"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Machine Learning"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Machine Learning with this free resource from Kaggle (Free)."
+    },
+    {
+      "id": "GA-001",
+      "title": "Google Analytics Certification",
+      "provider": "Google Skillshop (Free)",
+      "url": "https://skillshop.docebosaas.com/learn/courses/google-analytics",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Google Analytics"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Google Analytics"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Google Analytics with this free resource from Google Skillshop (Free)."
+    },
+    {
+      "id": "GM-001",
+      "title": "Google Ads Certification",
+      "provider": "Google Skillshop (Free)",
+      "url": "https://skillshop.docebosaas.com/learn/courses/google-ads",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Google Ads",
+        "SEM"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Google Ads"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Google Ads with this free resource from Google Skillshop (Free)."
+    },
+    {
+      "id": "HB-001",
+      "title": "HubSpot Inbound Marketing",
+      "provider": "HubSpot Academy (Free)",
+      "url": "https://academy.hubspot.com/courses/inbound-marketing",
+      "duration_hours": 5,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Inbound Marketing",
+        "HubSpot"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Inbound Marketing"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Inbound Marketing with this free resource from HubSpot Academy (Free)."
+    },
+    {
+      "id": "HB-002",
+      "title": "HubSpot Content Marketing",
+      "provider": "HubSpot Academy (Free)",
+      "url": "https://academy.hubspot.com/courses/content-marketing",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Content Marketing"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Content Marketing"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Content Marketing with this free resource from HubSpot Academy (Free)."
+    },
+    {
+      "id": "HB-003",
+      "title": "HubSpot SEO Certification",
+      "provider": "HubSpot Academy (Free)",
+      "url": "https://academy.hubspot.com/courses/seo",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "SEO"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in SEO"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn SEO with this free resource from HubSpot Academy (Free)."
+    },
+    {
+      "id": "HB-004",
+      "title": "HubSpot Email Marketing",
+      "provider": "HubSpot Academy (Free)",
+      "url": "https://academy.hubspot.com/courses/email-marketing",
+      "duration_hours": 3,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Email Marketing"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Email Marketing"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Email Marketing with this free resource from HubSpot Academy (Free)."
+    },
+    {
+      "id": "HB-005",
+      "title": "HubSpot CRM",
+      "provider": "HubSpot Academy (Free)",
+      "url": "https://academy.hubspot.com/courses/sales-enablement",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "CRM",
+        "HubSpot"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in CRM"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn CRM with this free resource from HubSpot Academy (Free)."
+    },
+    {
+      "id": "PM-BIZ",
+      "title": "Project Management Basics",
+      "provider": "Google (Coursera Audit)",
+      "url": "https://www.coursera.org/learn/project-management-foundations",
+      "duration_hours": 12,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Project Management"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Project Management"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Project Management with this free resource from Google (Coursera Audit)."
+    },
+    {
+      "id": "EX-001",
+      "title": "Excel for Business",
+      "provider": "Macquarie (Coursera Audit)",
+      "url": "https://www.coursera.org/learn/excel-essentials",
+      "duration_hours": 15,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Excel"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Excel"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Excel with this free resource from Macquarie (Coursera Audit)."
+    },
+    {
+      "id": "PW-001",
+      "title": "Power BI Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=TmhQCQr_0aI",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Power BI",
+        "Data Visualization"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Power BI"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Power BI with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "TB-001",
+      "title": "Tableau for Beginners",
+      "provider": "Tableau (Free)",
+      "url": "https://www.tableau.com/learn/training",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Tableau"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Tableau"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Tableau with this free resource from Tableau (Free)."
+    },
+    {
+      "id": "OS-001",
+      "title": "OSHA 10-Hour General Industry",
+      "provider": "OSHA (Free Materials)",
+      "url": "https://www.osha.gov/training/outreach/general_industry",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "OSHA Safety",
+        "Workplace Safety"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in OSHA Safety"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn OSHA Safety with this free resource from OSHA (Free Materials)."
+    },
+    {
+      "id": "OS-002",
+      "title": "OSHA 30-Hour General Industry",
+      "provider": "OSHA (Free Materials)",
+      "url": "https://www.osha.gov/training/outreach/general_industry",
+      "duration_hours": 30,
+      "difficulty": "intermediate",
+      "format": "interactive",
+      "skills_covered": [
+        "OSHA Safety",
+        "Workplace Safety"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in OSHA Safety"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn OSHA Safety with this free resource from OSHA (Free Materials)."
+    },
+    {
+      "id": "LN-001",
+      "title": "Lean Six Sigma White Belt",
+      "provider": "GoLeanSixSigma (Free)",
+      "url": "https://goleansixsigma.com/white-belt-training/",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Lean",
+        "Six Sigma",
+        "Process Improvement"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Lean"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Lean with this free resource from GoLeanSixSigma (Free)."
+    },
+    {
+      "id": "SC-001",
+      "title": "Supply Chain Fundamentals",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/15-762j-supply-chain-planning-spring-2011/",
+      "duration_hours": 20,
+      "difficulty": "beginner",
+      "format": "article",
+      "skills_covered": [
+        "Supply Chain",
+        "Logistics"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Supply Chain"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Supply Chain with this free resource from MIT OpenCourseWare."
+    },
+    {
+      "id": "WM-001",
+      "title": "Warehouse Management",
+      "provider": "Alison (Free)",
+      "url": "https://alison.com/course/warehouse-management",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Inventory Management",
+        "Warehouse"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Inventory Management"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Inventory Management with this free resource from Alison (Free)."
+    },
+    {
+      "id": "HP-001",
+      "title": "HIPAA Compliance Training",
+      "provider": "HHS (Free)",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/training/index.html",
+      "duration_hours": 3,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "HIPAA",
+        "Healthcare Compliance"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in HIPAA"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn HIPAA with this free resource from HHS (Free)."
+    },
+    {
+      "id": "EH-001",
+      "title": "EHR Fundamentals",
+      "provider": "ONC (Free)",
+      "url": "https://www.healthit.gov/topic/health-it-basics/health-it-resources-providers",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "article",
+      "skills_covered": [
+        "EHR Systems",
+        "Health IT"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in EHR Systems"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn EHR Systems with this free resource from ONC (Free)."
+    },
+    {
+      "id": "PC-001",
+      "title": "Patient Care Basics",
+      "provider": "Alison (Free)",
+      "url": "https://alison.com/course/patient-care-skills",
+      "duration_hours": 5,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Patient Care"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Patient Care"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Patient Care with this free resource from Alison (Free)."
+    },
+    {
+      "id": "MR-001",
+      "title": "Medical Terminology",
+      "provider": "Alison (Free)",
+      "url": "https://alison.com/course/introduction-to-medical-terminology",
+      "duration_hours": 8,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Medical Terminology"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Medical Terminology"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Medical Terminology with this free resource from Alison (Free)."
+    },
+    {
+      "id": "CF-001",
+      "title": "Corporate Finance Fundamentals",
+      "provider": "Khan Academy (Free)",
+      "url": "https://www.khanacademy.org/economics-finance-domain/core-finance",
+      "duration_hours": 20,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Finance",
+        "Financial Analysis"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Finance"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Finance with this free resource from Khan Academy (Free)."
+    },
+    {
+      "id": "FM-001",
+      "title": "Financial Modeling",
+      "provider": "CFI (Free Intro)",
+      "url": "https://corporatefinanceinstitute.com/resources/excel/financial-modeling-guide/",
+      "duration_hours": 8,
+      "difficulty": "intermediate",
+      "format": "interactive",
+      "skills_covered": [
+        "Financial Modeling",
+        "Excel"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Financial Modeling"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Financial Modeling with this free resource from CFI (Free Intro)."
+    },
+    {
+      "id": "AC-001",
+      "title": "Accounting Basics",
+      "provider": "Khan Academy (Free)",
+      "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme",
+      "duration_hours": 10,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Accounting"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Accounting"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Accounting with this free resource from Khan Academy (Free)."
+    },
+    {
+      "id": "EX-FIN",
+      "title": "Excel for Finance Professionals",
+      "provider": "CFI (Free)",
+      "url": "https://corporatefinanceinstitute.com/course/excel-fundamentals-formulas-for-finance/",
+      "duration_hours": 6,
+      "difficulty": "intermediate",
+      "format": "interactive",
+      "skills_covered": [
+        "Excel",
+        "Financial Modeling"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Excel"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Excel with this free resource from CFI (Free)."
+    },
+    {
+      "id": "CM-001",
+      "title": "Communication Skills",
+      "provider": "Coursera (Free Audit)",
+      "url": "https://www.coursera.org/learn/wharton-communication-skills",
+      "duration_hours": 8,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Communication"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Communication"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Communication with this free resource from Coursera (Free Audit)."
+    },
+    {
+      "id": "LD-001",
+      "title": "Leadership Principles",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/15-317-organizational-leadership-and-change-fall-2016/",
+      "duration_hours": 15,
+      "difficulty": "intermediate",
+      "format": "article",
+      "skills_covered": [
+        "Leadership"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Leadership"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Leadership with this free resource from MIT OpenCourseWare."
+    },
+    {
+      "id": "PR-001",
+      "title": "Problem Solving & Critical Thinking",
+      "provider": "Coursera (Free Audit)",
+      "url": "https://www.coursera.org/learn/problem-solving-skills",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Problem Solving",
+        "Critical Thinking"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Problem Solving"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Problem Solving with this free resource from Coursera (Free Audit)."
+    },
+    {
+      "id": "TM-001",
+      "title": "Time Management",
+      "provider": "Coursera (Free Audit)",
+      "url": "https://www.coursera.org/learn/work-smarter-not-harder",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Time Management"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Time Management"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Time Management with this free resource from Coursera (Free Audit)."
+    },
+    {
+      "id": "UX-001",
+      "title": "UX Design Fundamentals",
+      "provider": "Google (Coursera Audit)",
+      "url": "https://www.coursera.org/learn/foundations-user-experience-design",
+      "duration_hours": 21,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "UX Design"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in UX Design"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn UX Design with this free resource from Google (Coursera Audit)."
+    },
+    {
+      "id": "FG-001",
+      "title": "Figma Tutorial",
+      "provider": "freeCodeCamp (YouTube)",
+      "url": "https://www.youtube.com/watch?v=FTFaQWZBqQ8",
+      "duration_hours": 6,
+      "difficulty": "beginner",
+      "format": "video",
+      "skills_covered": [
+        "Figma",
+        "UI Design"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Figma"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Figma with this free resource from freeCodeCamp (YouTube)."
+    },
+    {
+      "id": "CS-DES",
+      "title": "Color Theory & Design Principles",
+      "provider": "Canva (Free)",
+      "url": "https://www.canva.com/learn/graphic-design-courses/",
+      "duration_hours": 4,
+      "difficulty": "beginner",
+      "format": "interactive",
+      "skills_covered": [
+        "Graphic Design"
+      ],
+      "prerequisites": [],
+      "learning_objectives": [
+        "Gain proficiency in Graphic Design"
+      ],
+      "onet_codes": [],
+      "domains": [],
+      "free": true,
+      "rating": 4.5,
+      "language": "en",
+      "description": "Learn Graphic Design with this free resource from Canva (Free)."
+    }
+  ]
+}

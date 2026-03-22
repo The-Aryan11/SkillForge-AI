@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - NEXT_PUBLIC_GATEWAY_URL=http://gateway:8000
+      - NEXT_PUBLIC_NLP_URL=http://nlp-engine:8001
+      - NEXT_PUBLIC_GRAPH_URL=http://graph-engine:8002
+    depends_on:
+      - gateway
+      - nlp-engine
+      - graph-engine
+
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - NLP_ENGINE_URL=http://nlp-engine:8001
+      - GRAPH_ENGINE_URL=http://graph-engine:8002
+
+  nlp-engine:
+    build:
+      context: ./nlp-engine
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+
+  graph-engine:
+    build:
+      context: ./graph-engine
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"

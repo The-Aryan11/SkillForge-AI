@@ -1,0 +1,12 @@
+[
+  {"code": "2B.1.a", "name": "Active Learning", "description": "Understanding implications of new information for current and future problem-solving and decision-making.", "category": "skills"},
+  {"code": "2B.1.b", "name": "Active Listening", "description": "Giving full attention to what other people are saying.", "category": "skills"},
+  {"code": "2B.2.a", "name": "Critical Thinking", "description": "Using logic and reasoning to identify the strengths and weaknesses of alternative solutions.", "category": "skills"},
+  {"code": "2B.2.b", "name": "Monitoring", "description": "Monitoring/assessing performance of yourself, other individuals, or organizations.", "category": "skills"},
+  {"code": "2B.3.a", "name": "Reading Comprehension", "description": "Understanding written sentences and paragraphs in work related documents.", "category": "skills"},
+  {"code": "2B.3.b", "name": "Writing", "description": "Communicating effectively in writing as appropriate.", "category": "skills"},
+  {"code": "2B.4.a", "name": "Mathematics", "description": "Using mathematics to solve problems.", "category": "skills"},
+  {"code": "2B.4.b", "name": "Science", "description": "Using scientific rules and methods to solve problems.", "category": "skills"},
+  {"code": "2C.1.a", "name": "Complex Problem Solving", "description": "Identifying complex problems and reviewing related information.", "category": "skills"},
+  {"code": "2C.1.b", "name": "Judgment and Decision Making", "description": "Considering costs and benefits of potential actions.", "category": "skills"}
+]

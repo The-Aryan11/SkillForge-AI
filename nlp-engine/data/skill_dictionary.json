@@ -1,0 +1,12 @@
+{
+  "programming_languages": ["Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Go", "Rust", "Ruby", "Swift", "Kotlin", "PHP", "R", "Scala", "MATLAB", "Perl", "Bash", "PowerShell"],
+  "web_frameworks": ["React", "Next.js", "Vue.js", "Angular", "Svelte", "Express.js", "FastAPI", "Django", "Flask", "Spring Boot", "Laravel", "Rails", "ASP.NET"],
+  "databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Elasticsearch", "SQLite", "Oracle", "SQL Server", "Cassandra", "DynamoDB", "BigQuery", "Snowflake"],
+  "cloud_platforms": ["AWS", "Google Cloud", "Azure", "Vercel", "Heroku", "DigitalOcean", "Cloudflare"],
+  "devops_tools": ["Docker", "Kubernetes", "Terraform", "Jenkins", "GitHub Actions", "GitLab CI", "Ansible", "Prometheus", "Grafana"],
+  "data_tools": ["Pandas", "NumPy", "Spark", "Kafka", "Airflow", "dbt", "Tableau", "Power BI", "Looker", "Matplotlib", "Seaborn"],
+  "ml_tools": ["TensorFlow", "PyTorch", "scikit-learn", "XGBoost", "LightGBM", "Keras", "Hugging Face", "MLflow", "Weights & Biases", "FAISS"],
+  "soft_skills": ["Communication", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking", "Time Management", "Adaptability", "Project Management"],
+  "methodologies": ["Agile", "Scrum", "Kanban", "Lean", "Six Sigma", "Waterfall", "DevOps", "CI/CD", "TDD", "BDD"],
+  "certifications": ["AWS Certified", "Google Cloud Certified", "Azure Certified", "PMP", "CISSP", "CPA", "OSHA 10", "OSHA 30", "CFA"]
+}

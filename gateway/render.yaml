@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: skillforge-gateway
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NLP_ENGINE_URL
+        value: https://your-nlp-space.hf.space
+      - key: GRAPH_ENGINE_URL
+        value: https://your-graph-space.hf.space

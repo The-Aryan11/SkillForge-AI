@@ -1,0 +1,10 @@
+{
+  "levels": [
+    {"level": 1, "name": "remember",   "verbs": ["define", "list", "recall", "recognize", "identify"], "activity_types": ["video", "documentation", "flashcards"]},
+    {"level": 2, "name": "understand", "verbs": ["explain", "summarize", "describe", "interpret", "classify"], "activity_types": ["tutorial", "article", "concept_exercise"]},
+    {"level": 3, "name": "apply",      "verbs": ["use", "execute", "implement", "demonstrate", "solve"], "activity_types": ["guided_exercise", "lab", "coding_challenge"]},
+    {"level": 4, "name": "analyze",    "verbs": ["differentiate", "compare", "examine", "deconstruct"], "activity_types": ["code_review", "case_study", "debugging"]},
+    {"level": 5, "name": "evaluate",   "verbs": ["judge", "critique", "justify", "recommend"], "activity_types": ["architecture_review", "framework_comparison"]},
+    {"level": 6, "name": "create",     "verbs": ["design", "build", "compose", "construct", "plan"], "activity_types": ["project", "system_design", "portfolio_piece"]}
+  ]
+}

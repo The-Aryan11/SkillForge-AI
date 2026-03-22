@@ -1,0 +1,58 @@
+[
+  {
+    "id": "swe-mid",
+    "title": "Software Engineer (Mid-level)",
+    "domain": "Technology",
+    "onet_soc": "15-1252.00",
+    "text": "We are looking for a mid-level Software Engineer proficient in Python, React, REST APIs, Git, SQL, and cloud platforms (AWS/GCP). Experience with CI/CD, Docker, and agile methodologies is required."
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "domain": "Data",
+    "onet_soc": "15-2051.00",
+    "text": "Seeking a Data Analyst skilled in SQL, Python (pandas, numpy), Excel, Tableau, and statistical analysis. Experience with data cleaning, ETL pipelines, and business intelligence dashboards preferred."
+  },
+  {
+    "id": "ml-engineer",
+    "title": "Machine Learning Engineer",
+    "domain": "Technology",
+    "onet_soc": "15-2051.01",
+    "text": "ML Engineer role requiring proficiency in Python, TensorFlow/PyTorch, scikit-learn, MLflow, Docker, Kubernetes, and cloud ML services (SageMaker/Vertex AI). Strong background in statistics and model deployment required."
+  },
+  {
+    "id": "devops-engineer",
+    "title": "DevOps Engineer",
+    "domain": "Technology",
+    "onet_soc": "15-1244.00",
+    "text": "DevOps Engineer with expertise in Docker, Kubernetes, Terraform, Jenkins/GitHub Actions, AWS/Azure, Linux, Python scripting, and monitoring tools (Prometheus, Grafana)."
+  },
+  {
+    "id": "marketing-manager",
+    "title": "Marketing Manager",
+    "domain": "Business",
+    "onet_soc": "11-2021.00",
+    "text": "Marketing Manager with skills in SEO/SEM, Google Analytics, HubSpot CRM, social media management, email marketing, content strategy, and campaign performance analysis."
+  },
+  {
+    "id": "warehouse-supervisor",
+    "title": "Warehouse Supervisor",
+    "domain": "Operations",
+    "onet_soc": "53-1042.00",
+    "text": "Warehouse Supervisor requiring OSHA safety certification, inventory management (WMS), forklift operation, logistics coordination, team leadership, and lean/5S methodology."
+  },
+  {
+    "id": "registered-nurse",
+    "title": "Registered Nurse",
+    "domain": "Healthcare",
+    "onet_soc": "29-1141.00",
+    "text": "RN position requiring BSN, active nursing license, patient care, EHR systems (Epic/Cerner), HIPAA compliance, triage, IV therapy, and critical care experience."
+  },
+  {
+    "id": "financial-analyst",
+    "title": "Financial Analyst",
+    "domain": "Finance",
+    "onet_soc": "13-2051.00",
+    "text": "Financial Analyst skilled in Excel (advanced), financial modeling, DCF valuation, SQL, Python (for analysis), Bloomberg Terminal, and PowerPoint. CFA Level 1 preferred."
+  }
+]
