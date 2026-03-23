@@ -7,30 +7,23 @@ import { Navbar } from "@/components/layout/navbar";
 import { UploadWizard } from "@/components/upload/upload-wizard";
 import { useStore } from "@/lib/store";
 
-export default function UploadPage() {
+function UploadPageInner() {
   const searchParams = useSearchParams();
   const isDemo = searchParams.get("demo") === "true";
   const { resetAnalysis } = useStore();
 
   React.useEffect(() => {
-    // If coming fresh, reset previous analysis
-    if (!isDemo) {
-      resetAnalysis();
-    }
+    if (!isDemo) resetAnalysis();
   }, []);
 
   return (
     <>
       <Navbar />
       <main className="relative min-h-screen pt-20 pb-12">
-        {/* Background */}
         <div className="fixed inset-0 -z-10">
           <div className="absolute inset-0 mesh-gradient opacity-50" />
-          <div className="absolute inset-0 bg-grid bg-grid-fade opacity-30" />
         </div>
-
         <div className="max-w-5xl mx-auto px-4">
-          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,11 +40,23 @@ export default function UploadPage() {
               onboarding plan.
             </p>
           </motion.div>
-
-          {/* Wizard */}
           <UploadWizard isDemo={isDemo} />
         </div>
       </main>
     </>
+  );
+}
+
+export default function UploadPage() {
+  return (
+    <React.Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full" />
+        </div>
+      }
+    >
+      <UploadPageInner />
+    </React.Suspense>
   );
 }

@@ -143,7 +143,7 @@ export function UploadWizard({ isDemo }: { isDemo: boolean }) {
   }, [isDemo]);
 
   const loadDemoData = async () => {
-    const { setResumeText, setJdText, setSelectedTemplate, setJdSource } = useStore.getState();
+    const { setResumeText, setJDText, setSelectedTemplate, setJDSource } = useStore.getState();
     
     // Demo resume text
     setResumeText(`John Doe
@@ -190,9 +190,9 @@ CERTIFICATIONS
 AWS Certified Solutions Architect - Associate (2022)
 Google Cloud Professional Data Engineer (2023)`);
 
-    setJdSource("template");
+    setJDSource("template");
     setSelectedTemplate("senior_data_engineer");
-    setJdText(`Senior Data Engineer
+    setJDText(`Senior Data Engineer
 
 About the Role:
 We are looking for an experienced Senior Data Engineer to join our Data Platform team. You will be responsible for designing, building, and maintaining scalable data infrastructure that powers analytics and machine learning across the organization.

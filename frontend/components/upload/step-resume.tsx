@@ -1,483 +1,193 @@
 "use client";
 
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import { motion } from "framer-motion";
 import { useStore } from "@/lib/store";
-import { cn } from "@/lib/utils";
 import { ACCEPTED_RESUME_TYPES, MAX_FILE_SIZE } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  FileText,
-  Upload,
-  ClipboardPaste,
-  Github,
-  CheckCircle2,
-  X,
-  File,
-  Loader2,
-  AlertCircle,
-  Sparkles,
-  Eye,
+  FileText, Upload, X, Github, ClipboardPaste,
+  CheckCircle, AlertTriangle,
 } from "lucide-react";
-import { toast } from "sonner";
+
+type InputMode = "upload" | "paste" | "github";
 
 export function StepResume() {
-  const {
-    resume_file,
-    resume_text,
-    github_username,
-    setResumeFile,
-    setResumeText,
-    setGithubUsername,
-  } = useStore();
+  const { resume_file, resume_text, github_username, setResumeFile, setResumeText, setGithubUsername } = useStore();
+  const [mode, setMode] = React.useState<InputMode>("upload");
+  const [error, setError] = React.useState<string>("");
+  const [githubInput, setGithubInput] = React.useState(github_username ?? "");
 
-  const [activeTab, setActiveTab] = React.useState<string>(
-    resume_text ? "paste" : "upload"
-  );
-  const [isParsing, setIsParsing] = React.useState(false);
-  const [parseError, setParseError] = React.useState<string | null>(null);
-  const [showPreview, setShowPreview] = React.useState(false);
-  const [githubLoading, setGithubLoading] = React.useState(false);
-  const [githubData, setGithubData] = React.useState<any>(null);
-
-  // ── File Upload via Dropzone ──
-  const onDrop = React.useCallback(
-    async (acceptedFiles: File[]) => {
-      const file = acceptedFiles[0];
-      if (!file) return;
-
-      setIsParsing(true);
-      setParseError(null);
-      setResumeFile(file);
-
-      try {
-        const formData = new FormData();
-        formData.append("file", file);
-
-        const response = await fetch("/api/parse-resume", {
-          method: "POST",
-          body: formData,
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to parse resume");
-        }
-
-        const data = await response.json();
-        setResumeText(data.text);
-        toast.success("Resume parsed successfully!", {
-          description: `${data.text.length} characters extracted from ${file.name}`,
-        });
-      } catch (err: any) {
-        setParseError(err.message || "Failed to parse resume");
-        toast.error("Failed to parse resume", {
-          description: "Try pasting the text directly instead.",
-        });
-      } finally {
-        setIsParsing(false);
-      }
-    },
-    [setResumeFile, setResumeText]
-  );
-
-  const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } =
-    useDropzone({
-      onDrop,
-      accept: ACCEPTED_RESUME_TYPES,
-      maxSize: MAX_FILE_SIZE,
-      maxFiles: 1,
-      onDropRejected: (fileRejections) => {
-        const error = fileRejections[0]?.errors[0];
-        if (error?.code === "file-too-large") {
-          toast.error("File too large", { description: "Maximum file size is 10MB" });
-        } else if (error?.code === "file-invalid-type") {
-          toast.error("Invalid file type", {
-            description: "Please upload a PDF, DOCX, or TXT file",
-          });
-        }
-      },
-    });
-
-  // ── GitHub Import ──
-  const handleGithubImport = async () => {
-    if (!github_username.trim()) return;
-
-    setGithubLoading(true);
-    try {
-      const response = await fetch(`/api/github-profile?username=${github_username.trim()}`);
-      if (!response.ok) throw new Error("GitHub profile not found");
-
-      const data = await response.json();
-      setGithubData(data.data);
-
-      // Append GitHub data to resume text
-      const githubSection = `\n\nGITHUB PROFILE (${github_username}):\n` +
-        `Top Languages: ${data.data.languages?.join(", ") || "N/A"}\n` +
-        `Public Repos: ${data.data.public_repos || 0}\n` +
-        `Recent Activity: ${data.data.recent_repos?.map((r: any) => `${r.name} (${r.language})`).join(", ") || "N/A"}\n` +
-        `Topics: ${data.data.topics?.join(", ") || "N/A"}`;
-
-      setResumeText((prev: string) => prev + githubSection);
-      toast.success("GitHub profile imported!", {
-        description: `Found ${data.data.public_repos} repos, ${data.data.languages?.length} languages`,
-      });
-    } catch (err: any) {
-      toast.error("Failed to import GitHub profile", {
-        description: err.message,
-      });
-    } finally {
-      setGithubLoading(false);
+  const onDrop = useCallback(async (accepted: File[]) => {
+    const file = accepted[0];
+    if (!file) return;
+    if (file.size > MAX_FILE_SIZE) {
+      setError("File too large. Maximum size is 10 MB.");
+      return;
     }
-  };
+    setError("");
+    setResumeFile(file);
 
-  const charCount = resume_text.length;
-  const isValid = charCount > 50;
+    // Extract text client-side for txt files
+    if (file.type === "text/plain") {
+      const text = await file.text();
+      setResumeText(text);
+    } else {
+      // For PDF/DOCX — will be parsed server-side; store placeholder
+      setResumeText(`[File: ${file.name} — will be parsed server-side]`);
+    }
+  }, [setResumeFile, setResumeText]);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: ACCEPTED_RESUME_TYPES,
+    maxFiles: 1,
+    maxSize: MAX_FILE_SIZE,
+    onDropRejected: () => setError("Invalid file type or file too large."),
+  });
+
+  const clearFile = () => { setResumeFile(null); setResumeText(""); setError(""); };
 
   return (
-    <Card className="max-w-3xl mx-auto glass border-border/50 shadow-xl">
-      <CardHeader className="pb-4">
+    <Card className="max-w-3xl mx-auto border-border/50 shadow-xl">
+      <CardHeader>
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center">
             <FileText className="w-5 h-5 text-white" />
           </div>
           <div>
-            <CardTitle className="text-xl">Your Resume</CardTitle>
-            <CardDescription>
-              Upload, paste, or import from GitHub — we&apos;ll extract every skill
-            </CardDescription>
+            <CardTitle>Upload Your Resume</CardTitle>
+            <CardDescription>PDF, DOCX, or plain text — or paste directly</CardDescription>
           </div>
+        </div>
+        {/* Mode tabs */}
+        <div className="flex gap-2 mt-4">
+          {([
+            ["upload", Upload,         "Upload File"],
+            ["paste",  ClipboardPaste, "Paste Text"],
+            ["github", Github,         "GitHub Profile"],
+          ] as const).map(([m, Icon, lbl]) => (
+            <button
+              key={m}
+              onClick={() => setMode(m)}
+              className={cn(
+                "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm transition-all border",
+                mode === m
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "border-border/50 text-muted-foreground hover:text-foreground hover:border-border"
+              )}
+            >
+              <Icon className="w-4 h-4" />{lbl}
+            </button>
+          ))}
         </div>
       </CardHeader>
 
-      <CardContent>
-        <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid grid-cols-3 mb-6 bg-muted/50">
-            <TabsTrigger value="upload" className="gap-2 text-sm">
-              <Upload className="w-4 h-4" />
-              <span className="hidden sm:inline">Upload File</span>
-              <span className="sm:hidden">Upload</span>
-            </TabsTrigger>
-            <TabsTrigger value="paste" className="gap-2 text-sm">
-              <ClipboardPaste className="w-4 h-4" />
-              <span className="hidden sm:inline">Paste Text</span>
-              <span className="sm:hidden">Paste</span>
-            </TabsTrigger>
-            <TabsTrigger value="github" className="gap-2 text-sm">
-              <Github className="w-4 h-4" />
-              <span className="hidden sm:inline">GitHub</span>
-              <span className="sm:hidden">GitHub</span>
-            </TabsTrigger>
-          </TabsList>
-
-          {/* ── Upload Tab ── */}
-          <TabsContent value="upload" className="mt-0">
-            <div
-              {...getRootProps()}
-              className={cn(
-                "relative flex flex-col items-center justify-center gap-4 p-10 rounded-2xl border-2 border-dashed transition-all duration-300 cursor-pointer group",
-                isDragActive && isDragAccept
-                  ? "border-primary bg-primary/5 scale-[1.02]"
-                  : isDragReject
-                  ? "border-destructive bg-destructive/5"
-                  : resume_file
-                  ? "border-primary/30 bg-primary/5"
-                  : "border-border hover:border-primary/30 hover:bg-primary/5"
-              )}
-            >
-              <input {...getInputProps()} />
-
-              {isParsing ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center gap-3"
-                >
-                  <div className="relative">
-                    <Loader2 className="w-12 h-12 text-primary animate-spin" />
-                    <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
-                  </div>
-                  <p className="text-sm font-medium">Parsing your resume...</p>
-                  <p className="text-xs text-muted-foreground">
-                    Extracting text and detecting structure
-                  </p>
-                </motion.div>
-              ) : resume_file && !parseError ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center gap-3"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <CheckCircle2 className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-sm font-semibold flex items-center gap-2">
-                      <File className="w-4 h-4" />
-                      {resume_file.name}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {(resume_file.size / 1024).toFixed(1)} KB •{" "}
-                      {charCount.toLocaleString()} characters extracted
-                    </p>
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setResumeFile(null);
-                      setResumeText("");
-                    }}
-                    className="text-xs text-muted-foreground hover:text-destructive"
-                  >
-                    <X className="w-3 h-3 mr-1" />
-                    Remove & re-upload
-                  </Button>
-                </motion.div>
-              ) : (
-                <>
-                  <div className="w-16 h-16 rounded-2xl bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary/30 group-hover:bg-primary/5 transition-all">
-                    <Upload className="w-7 h-7 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-sm font-medium mb-1">
-                      {isDragActive ? (
-                        <span className="text-primary">Drop your resume here</span>
-                      ) : (
-                        <>
-                          Drag & drop your resume, or{" "}
-                          <span className="text-primary">browse</span>
-                        </>
-                      )}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      Supports PDF, DOCX, TXT • Max 10MB
-                    </p>
-                  </div>
-                </>
-              )}
-
-              {parseError && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="flex items-center gap-2 text-sm text-destructive"
-                >
-                  <AlertCircle className="w-4 h-4" />
-                  {parseError}
-                </motion.div>
-              )}
-            </div>
-          </TabsContent>
-
-          {/* ── Paste Tab ── */}
-          <TabsContent value="paste" className="mt-0">
-            <div className="space-y-3">
-              <div className="relative">
-                <Textarea
-                  placeholder={`Paste your full resume text here...
-
-Example:
-John Doe
-Software Developer | San Francisco, CA
-
-EXPERIENCE
-Senior Developer at TechCorp (2021-Present)
-• Built microservices using Python and FastAPI...
-
-SKILLS
-Python, JavaScript, React, Docker, AWS...`}
-                  value={resume_text}
-                  onChange={(e) => setResumeText(e.target.value)}
-                  className="min-h-[300px] resize-none font-mono text-sm bg-muted/30 border-border/50 focus:border-primary/50 rounded-xl transition-colors"
-                />
-
-                {/* Character counter */}
-                <div className="absolute bottom-3 right-3 flex items-center gap-2">
-                  {resume_text.length > 0 && (
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-7 px-2 text-xs"
-                      onClick={() => setShowPreview(!showPreview)}
-                    >
-                      <Eye className="w-3 h-3 mr-1" />
-                      Preview
-                    </Button>
-                  )}
-                  <Badge
-                    variant={isValid ? "default" : "secondary"}
-                    className={cn(
-                      "text-xs font-mono",
-                      isValid && "bg-primary/10 text-primary border-primary/20"
-                    )}
-                  >
-                    {charCount.toLocaleString()} chars
-                  </Badge>
-                </div>
-              </div>
-
-              {charCount > 0 && charCount <= 50 && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-xs text-amber-500 flex items-center gap-1"
-                >
-                  <AlertCircle className="w-3 h-3" />
-                  Resume seems too short. Paste your complete resume for best results.
-                </motion.p>
-              )}
-            </div>
-          </TabsContent>
-
-          {/* ── GitHub Tab ── */}
-          <TabsContent value="github" className="mt-0">
-            <div className="space-y-6">
-              <div className="p-6 rounded-2xl border border-border/50 bg-muted/30">
-                <div className="flex items-center gap-3 mb-4">
-                  <Github className="w-5 h-5" />
-                  <div>
-                    <p className="text-sm font-medium">Import from GitHub</p>
-                    <p className="text-xs text-muted-foreground">
-                      We&apos;ll analyze your repos, languages, and contributions to
-                      enrich your skill profile
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3">
-                  <div className="flex-1">
-                    <Input
-                      placeholder="github-username"
-                      value={github_username}
-                      onChange={(e) => setGithubUsername(e.target.value)}
-                      className="bg-background"
-                      onKeyDown={(e) => e.key === "Enter" && handleGithubImport()}
-                    />
-                  </div>
-                  <Button
-                    onClick={handleGithubImport}
-                    disabled={!github_username.trim() || githubLoading}
-                    className="gap-2"
-                  >
-                    {githubLoading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Github className="w-4 h-4" />
-                    )}
-                    Import
-                  </Button>
-                </div>
-              </div>
-
-              {/* GitHub Results */}
-              <AnimatePresence>
-                {githubData && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="rounded-2xl border border-primary/20 bg-primary/5 p-5 space-y-4"
-                  >
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-semibold">
-                        GitHub Profile Imported
-                      </span>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                      <div className="p-3 rounded-xl bg-background/50">
-                        <p className="text-xs text-muted-foreground">Repos</p>
-                        <p className="text-lg font-bold">{githubData.public_repos}</p>
-                      </div>
-                      <div className="p-3 rounded-xl bg-background/50">
-                        <p className="text-xs text-muted-foreground">Languages</p>
-                        <p className="text-lg font-bold">
-                          {githubData.languages?.length || 0}
-                        </p>
-                      </div>
-                      <div className="p-3 rounded-xl bg-background/50">
-                        <p className="text-xs text-muted-foreground">Contributions</p>
-                        <p className="text-lg font-bold">
-                          {githubData.total_contributions || "N/A"}
-                        </p>
-                      </div>
-                    </div>
-
-                    {githubData.languages && (
-                      <div className="flex flex-wrap gap-1.5">
-                        {githubData.languages.map((lang: string) => (
-                          <Badge
-                            key={lang}
-                            variant="secondary"
-                            className="text-xs bg-primary/10 text-primary border-primary/20"
-                          >
-                            {lang}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
-
-                    <p className="text-xs text-muted-foreground">
-                      <Sparkles className="w-3 h-3 inline mr-1" />
-                      GitHub data has been appended to your profile for richer skill extraction.
-                    </p>
-                  </motion.div>
+      <CardContent className="space-y-4">
+        {/* Upload mode */}
+        {mode === "upload" && (
+          <>
+            {!resume_file ? (
+              <div
+                {...getRootProps()}
+                className={cn(
+                  "border-2 border-dashed rounded-xl p-12 text-center cursor-pointer transition-all",
+                  isDragActive
+                    ? "border-primary bg-primary/5"
+                    : "border-border/50 hover:border-primary/50 hover:bg-primary/5"
                 )}
-              </AnimatePresence>
-
-              {/* Still need resume text */}
-              {!resume_text && (
-                <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/5">
-                  <p className="text-sm text-amber-600 dark:text-amber-400">
-                    <AlertCircle className="w-4 h-4 inline mr-1.5" />
-                    GitHub import is supplementary. Please also upload or paste your
-                    resume for a complete analysis.
+              >
+                <input {...getInputProps()} />
+                <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
+                <p className="font-medium mb-1">
+                  {isDragActive ? "Drop it here!" : "Drag & drop your resume"}
+                </p>
+                <p className="text-sm text-muted-foreground mb-4">PDF, DOCX, DOC, or TXT — max 10 MB</p>
+                <Button variant="outline" size="sm">Browse Files</Button>
+              </div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex items-center gap-4 p-4 rounded-xl border border-green-500/30 bg-green-500/5"
+              >
+                <CheckCircle className="w-8 h-8 text-green-500 shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium truncate">{resume_file.name}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {(resume_file.size / 1024).toFixed(1)} KB · {resume_file.type || "text/plain"}
                   </p>
                 </div>
+                <Button variant="ghost" size="icon" onClick={clearFile}>
+                  <X className="w-4 h-4" />
+                </Button>
+              </motion.div>
+            )}
+            {error && (
+              <div className="flex items-center gap-2 text-sm text-red-500 p-3 rounded-lg bg-red-500/5 border border-red-500/20">
+                <AlertTriangle className="w-4 h-4 shrink-0" />{error}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Paste mode */}
+        {mode === "paste" && (
+          <div className="space-y-2">
+            <Textarea
+              placeholder="Paste your resume text here..."
+              value={resume_text}
+              onChange={(e) => setResumeText(e.target.value)}
+              className="min-h-[300px] font-mono text-sm resize-y"
+            />
+            <div className="flex items-center justify-between text-xs text-muted-foreground">
+              <span>{resume_text.length} characters</span>
+              {resume_text.length > 100 && (
+                <Badge variant="outline" className="text-green-500 border-green-500/30">
+                  <CheckCircle className="w-3 h-3 mr-1" />Ready
+                </Badge>
               )}
             </div>
-          </TabsContent>
-        </Tabs>
+          </div>
+        )}
 
-        {/* ── Status Footer ── */}
-        <AnimatePresence>
-          {isValid && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              className="mt-6 flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/20"
-            >
-              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-              <div className="flex-1">
-                <p className="text-sm font-medium text-primary">Resume ready</p>
-                <p className="text-xs text-muted-foreground">
-                  {charCount.toLocaleString()} characters •{" "}
-                  {resume_text.split("\n").filter((l) => l.trim()).length} lines detected
-                  {githubData && " • GitHub profile imported"}
-                </p>
+        {/* GitHub mode */}
+        {mode === "github" && (
+          <div className="space-y-4">
+            <div className="flex gap-2">
+              <div className="relative flex-1">
+                <Github className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  type="text"
+                  placeholder="your-github-username"
+                  value={githubInput}
+                  onChange={(e) => setGithubInput(e.target.value)}
+                  className="w-full pl-9 pr-4 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                />
               </div>
-              <Badge variant="outline" className="text-xs border-primary/20 text-primary">
-                Step 1 ✓
-              </Badge>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <Button
+                onClick={() => { setGithubUsername(githubInput); setResumeText(`[GitHub: ${githubInput}]`); }}
+                disabled={!githubInput.trim()}
+              >
+                Import
+              </Button>
+            </div>
+            {github_username && (
+              <div className="flex items-center gap-2 text-sm text-green-500 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
+                <CheckCircle className="w-4 h-4" />
+                GitHub profile @{github_username} will be analysed
+              </div>
+            )}
+            <p className="text-xs text-muted-foreground">
+              We use the GitHub REST API to extract your top languages, recent commit activity, repo topics, and contribution frequency to build a richer skill profile.
+            </p>
+          </div>
+        )}
       </CardContent>
     </Card>
   );

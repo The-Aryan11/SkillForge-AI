@@ -20,8 +20,7 @@ export function useStreaming() {
         const { done, value } = await reader.read();
         if (done) break;
         const text = decoder.decode(value);
-        const lines = text.split("
-").filter((l) => l.startsWith("data: "));
+        const lines = text.split("\n").filter((l) => l.startsWith("data: "));
         for (const line of lines) {
           try {
             const event = JSON.parse(line.slice(6));

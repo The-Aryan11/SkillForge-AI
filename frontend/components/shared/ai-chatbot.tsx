@@ -17,7 +17,7 @@ interface ChatMessage {
 }
 
 export function AIChatbot() {
-  const { chatbot_open, setChatbotOpen, pathway, gap_analysis } = useStore();
+  const { chatbot_open, toggleChatbot, pathway, gap_analysis } = useStore();
   const [messages, setMessages] = React.useState<ChatMessage[]>([
     {
       role: "assistant",
@@ -93,7 +93,7 @@ export function AIChatbot() {
                 <p className="text-[10px] text-muted-foreground">Ask about your pathway</p>
               </div>
             </div>
-            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg" onClick={() => setChatbotOpen(false)}>
+            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg" onClick={() => toggleChatbot()}>
               <X className="w-4 h-4" />
             </Button>
           </div>

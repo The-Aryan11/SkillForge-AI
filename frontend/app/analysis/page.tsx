@@ -1,184 +1,109 @@
 "use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
-import { useStore, selectReadiness, selectTotalGaps, selectCriticalGaps } from "@/lib/store";
-import { cn, formatPercentage, formatHours, GAP_SEVERITY_CONFIG, CATEGORY_CONFIG } from "@/lib/utils";
-import { RadarChart } from "@/components/analysis/radar-chart";
-import { GapTable } from "@/components/analysis/gap-table";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  BarChart3, Route, AlertTriangle, CheckCircle2, Clock, Sparkles, TrendingUp,
-  ArrowRight, Brain, Shield, Zap, Eye, ChevronRight, Target
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { useStore } from "@/lib/store";
+import { BarChart3, AlertTriangle, CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
+
+const SEV_COLOR: Record<string, string> = {
+  critical: "bg-red-500/10 text-red-400 border-red-500/20",
+  important: "bg-orange-500/10 text-orange-400 border-orange-500/20",
+  developmental: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+  growth: "bg-green-500/10 text-green-400 border-green-500/20",
+};
 
 export default function AnalysisPage() {
-  const router = useRouter();
-  const { skill_profile, parsed_jd, gap_analysis, roi_analysis } = useStore();
-  const readiness = selectReadiness(useStore.getState());
-  const totalGaps = selectTotalGaps(useStore.getState());
-  const criticalGaps = selectCriticalGaps(useStore.getState());
-
-  if (!gap_analysis || !skill_profile) {
-    return (
-      <>
-        <Navbar />
-        <main className="min-h-screen pt-20 flex items-center justify-center">
-          <Card className="max-w-md mx-auto glass">
-            <CardContent className="py-12 text-center">
-              <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-              <h2 className="text-xl font-bold mb-2">No Analysis Data</h2>
-              <p className="text-sm text-muted-foreground mb-6">Upload a resume and JD first to see your skill analysis.</p>
-              <Button onClick={() => router.push("/upload")} className="gap-2">
-                <Zap className="w-4 h-4" /> Go to Upload
-              </Button>
-            </CardContent>
-          </Card>
-        </main>
-      </>
-    );
-  }
-
-  const gaps = gap_analysis.gaps || [];
-  const strengths = gap_analysis.strengths || [];
-  const skills = skill_profile.skills || [];
+  const { gap_analysis, skill_profile, parsed_jd } = useStore() as any;
 
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-20 pb-12">
-        <div className="fixed inset-0 -z-10">
-          <div className="absolute inset-0 mesh-gradient opacity-30" />
-        </div>
+      <main className="min-h-screen pt-24 pb-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+            <h1 className="text-4xl font-bold mb-2 gradient-text">Skill Gap Analysis</h1>
+            <p className="text-muted-foreground mb-8">Multi-dimensional gap assessment with priority scoring</p>
+          </motion.div>
 
-        <div className="max-w-7xl mx-auto px-4 space-y-8">
-          {/* Header */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-bold mb-2">
-                Skill Gap <span className="gradient-text">Analysis</span>
-              </h1>
-              <p className="text-muted-foreground">
-                {parsed_jd?.role_title || "Target Role"} — {skills.length} skills extracted, {gaps.length} gaps identified
-              </p>
+          {!gap_analysis ? (
+            <div className="glass-card p-16 text-center">
+              <BarChart3 className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+              <h2 className="text-xl font-semibold mb-2">No analysis yet</h2>
+              <p className="text-muted-foreground mb-6">Upload your resume and job description to see your skill gap analysis.</p>
+              <a href="/upload" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium">
+                Start Analysis <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
-            <Button onClick={() => router.push("/pathway")} className="gap-2 gradient-bg border-0 shadow-lg shadow-primary/20">
-              View Learning Pathway <ArrowRight className="w-4 h-4" />
-            </Button>
-          </motion.div>
-
-          {/* Stats Grid */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-            {[
-              { label: "Readiness", value: formatPercentage(readiness), icon: Target, color: readiness > 0.6 ? "text-emerald-500" : readiness > 0.3 ? "text-amber-500" : "text-red-500", bg: "bg-emerald-500/10" },
-              { label: "Skills Found", value: skills.length.toString(), icon: CheckCircle2, color: "text-blue-500", bg: "bg-blue-500/10" },
-              { label: "Total Gaps", value: totalGaps.toString(), icon: AlertTriangle, color: "text-amber-500", bg: "bg-amber-500/10" },
-              { label: "Critical Gaps", value: criticalGaps.toString(), icon: Shield, color: "text-red-500", bg: "bg-red-500/10" },
-              { label: "Time Savings", value: roi_analysis ? `${roi_analysis.hours_saved}h` : "—", icon: Clock, color: "text-emerald-500", bg: "bg-emerald-500/10" },
-            ].map((stat, i) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 + i * 0.05 }}>
-                <Card className="glass border-border/50 card-hover">
-                  <CardContent className="p-4 flex items-center gap-3">
-                    <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center", stat.bg)}>
-                      <stat.icon className={cn("w-5 h-5", stat.color)} />
-                    </div>
-                    <div>
-                      <p className={cn("text-2xl font-bold", stat.color)}>{stat.value}</p>
-                      <p className="text-xs text-muted-foreground">{stat.label}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Readiness Bar */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-            <Card className="glass border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-primary" />
-                    <span className="font-semibold">Role Readiness</span>
+          ) : (
+            <div className="space-y-6">
+              {/* Readiness score */}
+              <div className="glass-card p-6 flex items-center gap-6">
+                <div className="relative w-24 h-24 shrink-0">
+                  <svg className="w-24 h-24 -rotate-90" viewBox="0 0 96 96">
+                    <circle cx="48" cy="48" r="40" fill="none" stroke="currentColor" strokeWidth="8" className="text-muted" />
+                    <circle cx="48" cy="48" r="40" fill="none" stroke="#3b82f6" strokeWidth="8"
+                      strokeDasharray={`${2 * Math.PI * 40 * (gap_analysis.readiness_score / 100)} ${2 * Math.PI * 40}`} />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center text-xl font-bold">
+                    {gap_analysis.readiness_score?.toFixed(0)}%
                   </div>
-                  <span className="text-2xl font-bold gradient-text">{formatPercentage(readiness)}</span>
                 </div>
-                <div className="relative h-4 rounded-full bg-muted overflow-hidden">
-                  <motion.div className="absolute h-full rounded-full gradient-bg" initial={{ width: 0 }} animate={{ width: formatPercentage(readiness) }} transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }} />
+                <div>
+                  <h2 className="text-2xl font-bold">Role Readiness</h2>
+                  <p className="text-muted-foreground">for {parsed_jd?.role_title ?? "target role"}</p>
+                  <div className="flex gap-4 mt-2 text-sm">
+                    <span className="text-red-400">{gap_analysis.gaps?.length ?? 0} gaps</span>
+                    <span className="text-green-400">{gap_analysis.strengths?.length ?? 0} strengths</span>
+                    <span className="text-muted-foreground">{gap_analysis.modules_to_skip ?? 0} modules skipped</span>
+                  </div>
                 </div>
-                <div className="flex justify-between mt-2 text-xs text-muted-foreground">
-                  <span>0% — Not Ready</span>
-                  <span>50% — Partial</span>
-                  <span>100% — Fully Ready</span>
+              </div>
+
+              {/* Gaps */}
+              <div className="glass-card p-6">
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-orange-400" /> Skill Gaps
+                </h3>
+                <div className="space-y-3">
+                  {(gap_analysis.gaps ?? []).map((gap: any, i: number) => (
+                    <motion.div key={i} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}
+                      className={`flex items-center gap-4 p-3 rounded-lg border ${SEV_COLOR[gap.severity] ?? ""}`}>
+                      <div className="flex-1">
+                        <p className="font-medium text-sm">{gap.skill_name}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">{gap.reasoning?.slice(0, 80)}...</p>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <p className="text-xs text-muted-foreground">Gap</p>
+                        <p className="font-bold">{gap.raw_gap}/5</p>
+                      </div>
+                      <div className="w-24">
+                        <div className="h-2 rounded-full bg-muted">
+                          <div className="h-full rounded-full bg-current" style={{ width: `${(gap.composite_gap_score / 5) * 100}%` }} />
+                        </div>
+                        <p className="text-[10px] text-muted-foreground mt-0.5 text-right">score: {gap.composite_gap_score?.toFixed(1)}</p>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              </div>
 
-          {/* Main Content: Radar + Gap Table */}
-          <div className="grid lg:grid-cols-5 gap-6">
-            {/* Radar Chart */}
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-2">
-              <Card className="glass border-border/50 h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-primary" /> Skill Radar
-                  </CardTitle>
-                  <CardDescription>Current skills vs. required skills</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <RadarChart skills={skills} gaps={gaps} parsedJD={parsed_jd} />
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Gap Table */}
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }} className="lg:col-span-3">
-              <Card className="glass border-border/50">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Eye className="w-5 h-5 text-primary" /> Skill Gap Details
-                  </CardTitle>
-                  <CardDescription>{gaps.length} gaps ranked by priority</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <GapTable gaps={gaps} strengths={strengths} />
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Strengths Section */}
-          {strengths.length > 0 && (
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
-              <Card className="glass border-border/50">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500" /> Your Strengths
-                  </CardTitle>
-                  <CardDescription>{strengths.length} skills that meet or exceed requirements — these modules can be skipped</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {strengths.map((s, i) => (
-                      <motion.div key={s.skill_name} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 + i * 0.03 }}>
-                        <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-                          <CheckCircle2 className="w-3 h-3 mr-1.5" />
-                          {s.skill_name}
-                          <span className="ml-1.5 text-xs opacity-60">({s.current_level}/{s.required_level})</span>
-                        </Badge>
-                      </motion.div>
+              {/* Strengths */}
+              {(gap_analysis.strengths ?? []).length > 0 && (
+                <div className="glass-card p-6">
+                  <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-400" /> Your Strengths
+                  </h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {(gap_analysis.strengths ?? []).map((s: any, i: number) => (
+                      <div key={i} className="p-3 rounded-lg bg-green-500/5 border border-green-500/20">
+                        <p className="font-medium text-sm">{s.skill_name}</p>
+                        <p className="text-xs text-muted-foreground">{s.current_level}/5 — surplus: +{s.surplus}</p>
+                      </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </main>

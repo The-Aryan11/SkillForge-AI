@@ -266,6 +266,15 @@ export type BloomLevel =
   | "evaluate"
   | "create";
 
+export interface ModuleReasoning {
+  skill_name: string;
+  resume_evidence: string;
+  jd_evidence: string;
+  gap_analysis: string;
+  course_selection: string;
+  scheduling: string;
+  priority_score: number;
+}  
 export interface LearningModule {
   id: string;
   skill_name: string;
