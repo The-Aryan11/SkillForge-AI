@@ -43,5 +43,3 @@
 Works for 6+ domains: Technology, Data, Business, Operations, Healthcare, Finance
 
 ---
-
-## 🏗️ Architecture
